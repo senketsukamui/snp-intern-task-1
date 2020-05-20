@@ -28,17 +28,17 @@
   font-weight: 600;
 }
 
-$header-width: 1200px;
+body {
+  background: #f2f2f2;
+}
 
 .header {
   display: flex;
-  width: 1200px;
   height: 173px;
-  margin: 0 auto;
   background: linear-gradient(360deg, #223036 0%, #223036 100%);
-  color: #ffffff;
   position: relative;
   &__description {
+    color: #ffffff;
     font-family: "ptsans";
     font-style: normal;
     font-weight: normal;
@@ -57,6 +57,7 @@ $header-width: 1200px;
     margin: 49px 57px 44px 47px;
   }
   &__login {
+    color: #ffffff;
     font-family: "ptsans";
     font-style: normal;
     font-weight: normal;
@@ -70,26 +71,145 @@ $header-width: 1200px;
   }
 }
 
-.menu {
-  font-family: "brutal";
-  display: flex;
-  width: $header-width;
-  height: 48px;
-  margin: 0 auto;
-  background-color: gray;
-  &__items {
+.main {
+  &__menu {
+    font-family: "brutal";
     display: flex;
-    margin-left: 42px;
-    margin-top: 17px;
-    margin-bottom: 14px;
-    &__item:not(:first-child) {
-      margin-left: 49px;
+    height: 48px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    &__items {
+      display: flex;
+      margin-left: 42px;
+      margin-top: 13px;
+      margin-bottom: 11px;
+      cursor: pointer;
+      &__item {
+        padding: 4px 13px 3px 14px;
+      }
+      &__item:not(:first-child) {
+        margin-left: 49px;
+      }
+      &__item:hover {
+        background: #faaf3f;
+        border-radius: 2px;
+        transition: background-color 0.3s;
+      }
+    }
+    &__menu-btn {
+      margin-left: 47px;
+      cursor: pointer;
+    }
+    &__search-btn {
+      margin-right: 16px;
+      margin-left: auto;
+      cursor: pointer;
     }
   }
-  &__menu-btn {
-    margin-left: 47px;
+  &__wrapper {
+    margin-left: 72px;
+    margin-right: 68px;
+    &__today-title {
+      font-family: "ptsans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 22px;
+      padding: 30px 0;
+      letter-spacing: -0.02em;
+      font-feature-settings: "tnum" on, "lnum" on;
+    }
   }
-  &__search-btn {
-    margin-left: 594px;
+}
+
+.article {
+  background: url("../assets/images/article-1.png");
+  background-repeat: no-repeat;
+  padding: 30px 20px;
+  width: 789px;
+  height: 492px;
+  &__category {
+    padding-top: 120px;
+    font-family: "brutal";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-feature-settings: "tnum" on, "lnum" on;
+    color: #ffffff;
+    &_text-highlight {
+      background: #faaf3f;
+      width: 118px;
+      height: 24px;
+      text-align: center;
+      padding-top: 8px;
+      padding-bottom: 5px;
+    }
   }
+  &__title {
+    font-family: "brutal";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    font-feature-settings: "tnum" on, "lnum" on;
+    color: #ffffff;
+    width: 558px;
+    height: 83px;
+    padding-top: 50px;
+  }
+  &__description {
+    font-family: "ptsans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    font-feature-settings: "tnum" on, "lnum" on;
+    width: 720px;
+    height: 73px;
+    color: #ffffff;
+  }
+  &__information-block {
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    font-family: "ptsans";
+    padding-top: 45px;
+    &__author {
+      width: 294px;
+      height: 23px;
+      &__name {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 24px;
+      }
+      &__date {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+    &__social {
+      display: flex;
+      margin-right: 54px;
+      & > div {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 16px;
+        margin-right: 9px;
+      }
+    }
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: #ffffff;
 }
