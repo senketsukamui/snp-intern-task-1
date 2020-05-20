@@ -1,0 +1,19 @@
+@font-face {
+  font-family: brutal;
+  src: url("./assets/fonts/BrutalRegular.woff");
+  font-weight: 400; }
+
+@font-face {
+  font-family: brutal;
+  src: url("./assets/fonts/BrutalMedium.woff");
+  font-weight: 500; }
+
+@font-face {
+  font-family: brutal;
+  src: url("./assets/fonts/BrutalBold.woff");
+  font-weight: 700; }
+
+.header {
+  color: red; }
+
+/*# sourceMappingURL=index.css.map */
