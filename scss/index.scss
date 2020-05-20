@@ -1,23 +1,95 @@
 @font-face {
   font-family: brutal;
-  src: url("./assets/fonts/BrutalRegular.woff");
+  src: url(".././assets/fonts/BrutalRegular.woff");
   font-weight: 400;
 }
 
 @font-face {
   font-family: brutal;
-  src: url("./assets/fonts/BrutalMedium.woff");
+  src: url(".././assets/fonts/BrutalMedium.woff");
   font-weight: 500;
 }
 
 @font-face {
   font-family: brutal;
-  src: url("./assets/fonts/BrutalBold.woff");
+  src: url(".././assets/fonts/BrutalBold.woff");
   font-weight: 700;
 }
 
-$body-color: red;
+@font-face {
+  font-family: ptsans;
+  src: url(".././assets/fonts/PTSans-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: ptsans;
+  src: url(".././assets/fonts/PTSans.ttf");
+  font-weight: 600;
+}
+
+$header-width: 1200px;
 
 .header {
-  color: $body-color;
+  display: flex;
+  width: 1200px;
+  height: 173px;
+  margin: 0 auto;
+  background: linear-gradient(360deg, #223036 0%, #223036 100%);
+  color: #ffffff;
+  position: relative;
+  &__description {
+    font-family: "ptsans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    width: 658px;
+    height: 87px;
+    align-self: center;
+    margin-right: 9px;
+    font-feature-settings: "tnum" on, "lnum" on;
+  }
+  &__logo {
+    width: 370px;
+    height: 80px;
+    object-fit: fill;
+    margin: 49px 57px 44px 47px;
+  }
+  &__login {
+    font-family: "ptsans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: right;
+    margin-top: 12px;
+    margin-right: 19px;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.menu {
+  font-family: "brutal";
+  display: flex;
+  width: $header-width;
+  height: 48px;
+  margin: 0 auto;
+  background-color: gray;
+  &__items {
+    display: flex;
+    margin-left: 42px;
+    margin-top: 17px;
+    margin-bottom: 14px;
+    &__item:not(:first-child) {
+      margin-left: 49px;
+    }
+  }
+  &__menu-btn {
+    margin-left: 47px;
+  }
+  &__search-btn {
+    margin-left: 594px;
+  }
 }
