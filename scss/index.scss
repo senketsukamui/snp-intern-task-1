@@ -32,8 +32,8 @@ div {
 
 @font-face {
   font-family: ptsans;
-  src: url(".././assets/fonts/PTSans.ttf");
-  font-weight: 600;
+  src: url(".././assets/fonts/PTSans-Bold.ttf");
+  font-weight: 700;
 }
 
 body {
@@ -143,8 +143,10 @@ body {
     &_main {
       background: url("../assets/images/article-1.png");
       background-repeat: no-repeat;
+      cursor: pointer;
     }
     &_medium {
+      cursor: pointer;
       background: url("../assets/images/article-2.png");
       background-repeat: no-repeat;
       width: 70%;
@@ -164,6 +166,7 @@ body {
       }
     }
     &_small {
+      cursor: pointer;
       background: url("../assets/images/article-3.png");
       background-repeat: no-repeat;
       width: 30%;
@@ -262,6 +265,87 @@ body {
       line-height: 16px;
       margin-right: 9px;
     }
+  }
+}
+%caption-styles {
+  font-family: "ptsans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 24px;
+  margin-top: 30px;
+}
+
+.caption {
+  @extend %caption-styles;
+}
+
+.thumbs {
+  &__categories {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      @extend %caption-styles;
+      font-weight: bold;
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      &__category {
+        cursor: pointer;
+      }
+      &__category:not(:first-child) {
+        margin-left: 40px;
+      }
+      &__category:hover {
+        border-bottom: #f7ab32 solid 2px;
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 36px;
+    &__card {
+      .information-block {
+        margin-bottom: 0px;
+      }
+      &_first {
+        background: url("../assets/images/thumbs-1.png");
+        background-repeat: no-repeat;
+      }
+      &_second {
+        background: url("../assets/images/thumbs-2.png");
+        background-repeat: no-repeat;
+      }
+
+      &_third {
+        background: url("../assets/images/thumbs-3.png");
+        background-repeat: no-repeat;
+      }
+
+      display: flex;
+      padding: 20px 20px;
+      height: 177px;
+      width: 250px;
+      flex-direction: column;
+      justify-content: space-between;
+      &__title {
+        font-family: "brutal";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.navigation {
+  &__right-arrow {
+    margin-left: 10px;
   }
 }
 

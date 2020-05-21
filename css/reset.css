@@ -129,4 +129,8 @@ textarea {
   outline: none;
   border: 0; }
 
+b,
+strong {
+  font-weight: bolder; }
+
 /*# sourceMappingURL=reset.css.map */
