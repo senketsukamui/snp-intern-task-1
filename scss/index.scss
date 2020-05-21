@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  word-wrap: break-word;
+}
+
 @font-face {
   font-family: brutal;
   src: url(".././assets/fonts/BrutalRegular.woff");
@@ -114,96 +122,145 @@ body {
       font-weight: normal;
       font-size: 28px;
       line-height: 22px;
-      padding: 30px 0;
+      padding-top: 30px;
+      padding-bottom: 30px;
       letter-spacing: -0.02em;
       font-feature-settings: "tnum" on, "lnum" on;
     }
   }
 }
-
-.article {
-  background: url("../assets/images/article-1.png");
-  background-repeat: no-repeat;
-  padding: 30px 20px;
+.articles {
+  display: flex;
+  flex: 0 0 70%;
+  flex-direction: column;
   width: 789px;
-  height: 492px;
-  &__category {
-    padding-top: 120px;
-    font-family: "brutal";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    font-feature-settings: "tnum" on, "lnum" on;
-    color: #ffffff;
-    &_text-highlight {
-      background: #faaf3f;
-      width: 118px;
-      height: 24px;
-      text-align: center;
-      padding-top: 8px;
-      padding-bottom: 5px;
-    }
-  }
-  &__title {
-    font-family: "brutal";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    font-feature-settings: "tnum" on, "lnum" on;
-    color: #ffffff;
-    width: 558px;
-    height: 83px;
-    padding-top: 50px;
-  }
-  &__description {
-    font-family: "ptsans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    font-feature-settings: "tnum" on, "lnum" on;
-    width: 720px;
-    height: 73px;
-    color: #ffffff;
-  }
-  &__information-block {
+  &__combined {
+    margin-top: 25px;
     display: flex;
-    justify-content: space-between;
-    color: #ffffff;
-    font-family: "ptsans";
-    padding-top: 45px;
-    &__author {
-      width: 294px;
-      height: 23px;
-      &__name {
+  }
+  &__article {
+    height: 492px;
+    &_main {
+      background: url("../assets/images/article-1.png");
+      background-repeat: no-repeat;
+    }
+    &_medium {
+      background: url("../assets/images/article-2.png");
+      background-repeat: no-repeat;
+      width: 70%;
+      padding-right: 40px;
+    }
+    &_medium & {
+      &__wrapper {
+        &__category {
+          padding-top: 85px;
+        }
+        .information-block {
+          flex-direction: column;
+          &__author {
+            margin-bottom: 11px;
+          }
+        }
+      }
+    }
+    &_small {
+      background: url("../assets/images/article-3.png");
+      background-repeat: no-repeat;
+      width: 30%;
+    }
+
+    &_small & {
+      &__wrapper {
+        .information-block {
+          flex-direction: column;
+
+          &__author {
+            margin-bottom: 11px;
+          }
+        }
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      margin: 0 20px;
+      &__category {
+        font-family: "brutal";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-feature-settings: "tnum" on, "lnum" on;
+        color: #ffffff;
+        padding-top: 150px;
+        width: 118px;
+        &_text-highlight {
+          background: #faaf3f;
+          text-align: center;
+          padding-top: 8px;
+          padding-bottom: 5px;
+        }
+      }
+      &__title {
+        font-family: "brutal";
         font-style: normal;
         font-weight: bold;
-        font-size: 15px;
-        line-height: 24px;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        font-feature-settings: "tnum" on, "lnum" on;
+        color: #ffffff;
+        height: 83px;
       }
-      &__date {
+      &__description {
+        font-family: "ptsans";
         font-style: normal;
         font-weight: normal;
-        font-size: 10px;
-        line-height: 16px;
+        font-size: 18px;
+        line-height: 24px;
+        font-feature-settings: "tnum" on, "lnum" on;
+        height: 73px;
+        color: #ffffff;
       }
     }
-    &__social {
-      display: flex;
-      margin-right: 54px;
-      & > div {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 10px;
-        line-height: 16px;
-        margin-right: 9px;
-      }
+  }
+}
+.information-block {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  font-family: "ptsans";
+  margin-bottom: 30px;
+  &__author {
+    width: 294px;
+    height: 23px;
+    &__name {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 24px;
+    }
+    &__date {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+  &__social {
+    display: flex;
+    & > div {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 16px;
+      margin-right: 9px;
     }
   }
 }
