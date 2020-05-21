@@ -74,7 +74,7 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); }
   .main__menu__items {
     display: flex;
-    margin-left: 42px;
+    margin-left: 47px;
     margin-top: 13px;
     margin-bottom: 11px;
     cursor: pointer; }
@@ -268,6 +268,48 @@ body {
       line-height: 24px;
       letter-spacing: -0.02em;
       color: #ffffff; }
+
+.timelines {
+  margin-top: 30px; }
+  .timelines__series {
+    display: flex;
+    justify-content: space-between; }
+    .timelines__series__title {
+      font-family: "ptsans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 22px;
+      letter-spacing: -0.02em; }
+  .timelines__wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between; }
+
+.timeline {
+  padding: 25px 22px 27px 21px;
+  width: 380px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); }
+  .timeline__title {
+    font-family: "brutal";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    width: 250px;
+    padding-bottom: 24px; }
+  .timeline__content {
+    border-left: 1px solid #828282; }
+    .timeline__content__line {
+      font-family: "ptsans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 21px;
+      margin-bottom: 25px; }
+    .timeline__content__line:before {
+      content: url("../assets/images/dot.svg");
+      display: inline; }
 
 .navigation__right-arrow {
   margin-left: 10px; }

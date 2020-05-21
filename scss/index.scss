@@ -87,7 +87,7 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     &__items {
       display: flex;
-      margin-left: 42px;
+      margin-left: 47px;
       margin-top: 13px;
       margin-bottom: 11px;
       cursor: pointer;
@@ -339,6 +339,60 @@ body {
         letter-spacing: -0.02em;
         color: #ffffff;
       }
+    }
+  }
+}
+
+.timelines {
+  margin-top: 30px;
+  &__series {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      font-family: "ptsans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 22px;
+      letter-spacing: -0.02em;
+    }
+  }
+  &__wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.timeline {
+  padding: 25px 22px 27px 21px;
+  width: 380px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  &__title {
+    font-family: "brutal";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    width: 250px;
+    padding-bottom: 24px;
+  }
+  &__content {
+    border-left: 1px solid #828282;
+
+    &__line {
+      font-family: "ptsans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 21px;
+      margin-bottom: 25px;
+    }
+
+    &__line:before {
+      content: url("../assets/images/dot.svg");
+      display: inline;
     }
   }
 }
