@@ -500,6 +500,34 @@ body {
       margin-top: 18px;
     }
   }
+  &__news {
+    padding: 21px 17px 23px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    &__date {
+      font-family: "ptsans";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 21px;
+      padding-top: 20px;
+    }
+    &__time {
+      font-family: "ptsans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      padding-top: 8px;
+    }
+    &__description {
+      font-family: "ptsans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 21px;
+      padding-top: 6px;
+    }
+  }
 }
 
 .navigation {
