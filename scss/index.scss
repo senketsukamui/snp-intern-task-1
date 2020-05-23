@@ -110,7 +110,7 @@ body {
         padding: 4px 13px 3px 14px;
       }
       &__item:not(:first-child) {
-        margin-left: 35px;
+        margin-left: 21px;
       }
       &__item:hover {
         background: #faaf3f;
@@ -395,8 +395,9 @@ body {
     padding-bottom: 24px;
   }
   &__content {
-    border-left: 1px solid #828282;
-
+    border-left: 1px solid;
+    border-image: linear-gradient() 1
+      100%;
     &__line {
       font-family: "ptsans";
       font-style: normal;
@@ -404,11 +405,15 @@ body {
       font-size: 15px;
       line-height: 21px;
       margin-bottom: 25px;
+      padding-left: 14px;
+      position: relative;
     }
 
     &__line:before {
       content: url("../assets/images/dot.svg");
-      display: inline;
+      position: absolute;
+      width: 100%;
+      left: -5px;
     }
   }
   &__button {
@@ -427,12 +432,18 @@ body {
   }
 }
 
+%sidebar-block-styles {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 18px;
+}
+
 .sidebar {
   margin-left: 20px;
-  &__series {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px 17px 20px 21px;
+  & > div {
     width: 251px;
+  }
+  &__series {
+    @extend %sidebar-block-styles;
     &__content {
       margin-top: 17px;
       .timeline {
@@ -445,9 +456,11 @@ body {
     }
   }
   &__tests {
-    padding: 20px 17px 23px 19px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    @extend %sidebar-block-styles;
     margin-top: 20px;
+    .categories {
+      width: 100%;
+    }
     &__content {
       padding: 64px 18px 21px 20px;
       background: url("../assets/images/test.png");
@@ -472,8 +485,7 @@ body {
     }
   }
   &__video {
-    padding: 20px 17px 16px 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    @extend %sidebar-block-styles;
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -501,8 +513,8 @@ body {
     }
   }
   &__news {
-    padding: 21px 17px 23px 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    @extend %sidebar-block-styles;
+    margin-top: 20px;
     &__date {
       font-family: "ptsans";
       font-style: normal;

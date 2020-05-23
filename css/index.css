@@ -92,7 +92,7 @@ body {
     .main__menu__items__item {
       padding: 4px 13px 3px 14px; }
     .main__menu__items__item:not(:first-child) {
-      margin-left: 35px; }
+      margin-left: 21px; }
     .main__menu__items__item:hover {
       background: #faaf3f;
       border-radius: 2px;
@@ -311,17 +311,22 @@ body {
     width: 250px;
     padding-bottom: 24px; }
   .timeline__content {
-    border-left: 1px solid #828282; }
+    border-left: 1px solid;
+    border-image: linear-gradient() 1 100%; }
     .timeline__content__line {
       font-family: "ptsans";
       font-style: normal;
       font-weight: normal;
       font-size: 15px;
       line-height: 21px;
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      padding-left: 14px;
+      position: relative; }
     .timeline__content__line:before {
       content: url("../assets/images/dot.svg");
-      display: inline; }
+      position: absolute;
+      width: 100%;
+      left: -5px; }
   .timeline__button {
     font-family: "brutal";
     font-size: 14px;
@@ -336,23 +341,25 @@ body {
     border-radius: 2px;
     margin-top: 25px; }
 
+.sidebar__series, .sidebar__tests, .sidebar__video, .sidebar__news {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 18px; }
+
 .sidebar {
   margin-left: 20px; }
-  .sidebar__series {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px 17px 20px 21px;
+  .sidebar > div {
     width: 251px; }
-    .sidebar__series__content {
-      margin-top: 17px; }
-      .sidebar__series__content .timeline {
-        box-shadow: none;
-        padding: 0 0; }
-    .sidebar__series .information-block {
-      width: auto; }
+  .sidebar__series__content {
+    margin-top: 17px; }
+    .sidebar__series__content .timeline {
+      box-shadow: none;
+      padding: 0 0; }
+  .sidebar__series .information-block {
+    width: auto; }
   .sidebar__tests {
-    padding: 20px 17px 23px 19px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin-top: 20px; }
+    .sidebar__tests .categories {
+      width: 100%; }
     .sidebar__tests__content {
       padding: 64px 18px 21px 20px;
       background: url("../assets/images/test.png");
@@ -373,8 +380,6 @@ body {
       .sidebar__tests__content .information-block {
         margin-bottom: 0px; }
   .sidebar__video {
-    padding: 20px 17px 16px 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -398,8 +403,7 @@ body {
       line-height: 21px;
       margin-top: 18px; }
   .sidebar__news {
-    padding: 21px 17px 23px 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); }
+    margin-top: 20px; }
     .sidebar__news__date {
       font-family: "ptsans";
       font-style: normal;
