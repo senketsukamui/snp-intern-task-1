@@ -110,7 +110,7 @@ body {
         padding: 4px 13px 3px 14px;
       }
       &__item:not(:first-child) {
-        margin-left: 21px;
+        margin-left: 24px;
       }
       &__item:hover {
         background: #faaf3f;
@@ -123,7 +123,7 @@ body {
       cursor: pointer;
     }
     &__search-btn {
-      margin-right: 16px;
+      margin-right: 14px;
       margin-left: auto;
       cursor: pointer;
     }
@@ -300,14 +300,15 @@ body {
   font-weight: normal;
   font-size: 17px;
   line-height: 24px;
-  margin-top: 30px;
 }
 
 .caption {
   @extend %caption-styles;
+  margin-top: 26px;
 }
 
 .thumbs {
+  margin-top: 30px;
   &__categories {
     display: flex;
     justify-content: space-between;
@@ -426,6 +427,7 @@ body {
       padding-left: 14px;
       position: relative;
       border-left: 1px solid black;
+      margin-left: 3px;
       cursor: pointer;
     }
     &__line:last-child {
@@ -456,13 +458,12 @@ body {
     align-self: center;
     text-align: center;
     padding: 9px;
-    width: 197px;
     letter-spacing: 0.02em;
     background: #faaf3f;
     color: #ffffff;
     border-radius: 2px;
-    margin-top: 6px;
     cursor: pointer;
+    width: 197px;
   }
 }
 
@@ -486,6 +487,12 @@ body {
         margin-right: 0px;
         &__button {
           width: 100%;
+          margin-top: 19px;
+        }
+        &__content {
+          &__line:last-child {
+            padding-bottom: 0px;
+          }
         }
       }
     }
@@ -502,6 +509,7 @@ body {
     .timeline {
       &__button {
         width: 100%;
+        margin-top: 20px;
       }
     }
     &__content {
@@ -552,7 +560,7 @@ body {
       font-weight: bold;
       font-size: 15px;
       line-height: 21px;
-      margin-top: 18px;
+      margin-top: 23px;
     }
   }
   &__news {
@@ -587,7 +595,7 @@ body {
 
 .navigation {
   &__right-arrow {
-    margin-left: 10px;
+    margin-left: 15px;
   }
 }
 
@@ -605,9 +613,7 @@ body {
     color: #ffffff;
     border-radius: 2px;
     width: 92px;
-    height: 24px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 5px;
   }
 
   &__link {
