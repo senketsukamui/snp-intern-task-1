@@ -63,6 +63,9 @@ $layout_paddings: 68px;
   position: relative;
   padding: 47px;
   padding-right: 19px;
+  &__burger-icon {
+    display: none;
+  }
   &__description {
     color: #ffffff;
     font-family: "ptsans-caption";
@@ -106,6 +109,9 @@ $layout_paddings: 68px;
       cursor: pointer;
       &__item {
         padding: 4px 13px 3px 14px;
+        &_hidden {
+          display: none;
+        }
       }
       &__item:not(:first-child) {
         margin-left: 24px;
@@ -383,7 +389,7 @@ $layout_paddings: 68px;
     justify-content: space-between;
 
     &__title {
-      font-family: "ptsans";
+      font-family: "ptsans-caption";
       font-style: normal;
       font-weight: normal;
       font-size: 28px;
@@ -403,6 +409,9 @@ $layout_paddings: 68px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  &_hidden {
+    display: none;
+  }
   &:first-child {
     margin-right: 31px;
   }
@@ -641,7 +650,7 @@ $layout_paddings: 68px;
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .wrapper {
     width: 100%;
   }
@@ -665,11 +674,11 @@ $layout_paddings: 68px;
 .articles {
   &__combined {
     .col:first-child {
-      width: 69.7%;
+      width: 66.3%;
     }
 
     .col:last-child {
-      width: 30.3%;
+      width: 33.7%;
     }
   }
 
@@ -693,12 +702,12 @@ $layout_paddings: 68px;
   }
 
   &.row-2 {
-    margin-left: -12px;
-    margin-right: -12px;
+    margin-left: -11px;
+    margin-right: -11px;
 
     > .col {
-      padding-left: 12px;
-      padding-right: 12px;
+      padding-left: 11px;
+      padding-right: 11px;
     }
   }
 
@@ -714,22 +723,30 @@ $layout_paddings: 68px;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .wrapper {
-    width: 100%;
-  }
   .main {
     &__wrapper {
       padding: 0px 12px;
     }
+    &__menu {
+      &__menu-btn {
+        margin-left: 40px;
+      }
+      &__items {
+        margin-left: 17px;
+      }
+    }
   }
   .articles {
-    padding-right: 6px;
+    padding-right: 10px;
   }
   .sidebar {
-    padding-left: 6px;
+    width: 27%;
+    padding-left: 10px;
     margin-left: 0px;
   }
   .articles {
+    width: 73%;
+
     &__article {
       width: 100%;
 
@@ -744,11 +761,108 @@ $layout_paddings: 68px;
         }
       }
     }
-
     &__combined {
       > .row > .col {
         width: 50%;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .header {
+    &__description {
+      display: none;
+    }
+    &__burger-icon {
+      display: flex;
+    }
+  }
+  .main {
+    &__wrapper {
+      padding: 0px 0px;
+      &__today-title {
+        margin-left: 15px;
+      }
+    }
+    &__menu {
+      &__menu-btn {
+        display: none;
+      }
+      &__search-btn {
+        display: none;
+      }
+      &__items {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 19px;
+        margin-left: 0px;
+        width: 100%;
+        &__item {
+          margin-left: 0px;
+          &_hidden {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  .articles {
+    width: 100%;
+    &__article {
+      height: 386px;
+      &_main & {
+        &__wrapper {
+          .information-block {
+            flex-direction: column;
+            &__author {
+              margin-bottom: 11px;
+            }
+          }
+        }
+      }
+      &_medium {
+        background: url("../assets/images/article-2-large.png");
+        background-size: 100% 100%;
+      }
+      &_large {
+        background: url("../assets/images/article-3-large.png");
+        background-size: 100% 100%;
+      }
+    }
+    &__combined {
+      margin-top: 0px;
+      flex-direction: column;
+      .col:first-child {
+        width: 100%;
+      }
+
+      .col:last-child {
+        width: 100%;
+      }
+    }
+  }
+  .timeline {
+    width: 330px;
+    &_hidden {
+      display: flex;
+    }
+    & > div {
+      white-space: initial;
+    }
+  }
+  .timelines {
+    overflow: hidden;
+
+    &__wrapper {
+      width: max-content;
+      white-space: nowrap;
     }
   }
 }
