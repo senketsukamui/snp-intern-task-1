@@ -641,15 +641,15 @@ body {
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 1440px) {
-  .articles {
-    width: 74.2%;
-  }
+// @media screen and (max-width: 1440px) {
+//   .articles {
+//     width: 74.2%;
+//   }
 
-  .sidebar {
-    width: 25.8%;
-  }
-}
+//   .sidebar {
+//     width: 25.8%;
+//   }
+// }
 
 @media screen and (max-width: 1200px) {
   .wrapper {
@@ -657,16 +657,17 @@ body {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (max-width: 1439px) {
   .thumbs {
-    overflow: hidden;
-    &__cards {
-      width: max-content;
-      white-space: nowrap;
-      &__card {
-        &__title {
-          white-space: initial;
-        }
+    .navigation {
+      visibility: hidden;
+    }
+  }
+
+  .timelines {
+    &__series {
+      .navigation {
+        visibility: hidden;
       }
     }
   }
@@ -723,23 +724,7 @@ body {
   }
 }
 
-.timelines {
-  &__series {
-    .navigation {
-      visibility: hidden;
-    }
-  }
-}
-
-.thumbs {
-  &__categories {
-    .navigation {
-      visibility: hidden;
-    }
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   .main {
     &__wrapper {
       padding: 0px 12px;
@@ -784,9 +769,22 @@ body {
       }
     }
   }
+
+  .thumbs {
+    overflow: hidden;
+    &__cards {
+      width: max-content;
+      white-space: nowrap;
+      &__card {
+        &__title {
+          white-space: initial;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (max-width: 1023px) and (min-width: 768px) {
   .wrapper {
     width: 100%;
   }
@@ -798,11 +796,20 @@ body {
     padding: 0px 15px;
   }
   .thumbs {
+    overflow: hidden;
+    &__cards {
+      width: max-content;
+      white-space: nowrap;
+      &__card {
+        &__title {
+          white-space: initial;
+        }
+      }
+    }
     &__categories {
       margin-left: 15px;
     }
   }
-
   .header {
     padding: 16px;
     padding-bottom: 44px;
@@ -874,6 +881,10 @@ body {
             }
           }
         }
+      }
+      &_main {
+        background: url("../assets/images/article-1-large.png");
+        background-size: 100% 100%;
       }
       &_medium {
         margin-top: 15px;

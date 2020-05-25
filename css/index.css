@@ -494,24 +494,15 @@ body {
   width: 1200px;
   background-color: #ffffff; }
 
-@media screen and (max-width: 1440px) {
-  .articles {
-    width: 74.2%; }
-  .sidebar {
-    width: 25.8%; } }
-
 @media screen and (max-width: 1200px) {
   .wrapper {
     width: 100%; } }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-  .thumbs {
-    overflow: hidden; }
-    .thumbs__cards {
-      width: max-content;
-      white-space: nowrap; }
-      .thumbs__cards__card__title {
-        white-space: initial; } }
+@media screen and (max-width: 1439px) {
+  .thumbs .navigation {
+    visibility: hidden; }
+  .timelines__series .navigation {
+    visibility: hidden; } }
 
 .articles__combined .col:first-child {
   width: 66.3%; }
@@ -544,13 +535,7 @@ body {
       padding-left: 18px;
       padding-right: 18px; }
 
-.timelines__series .navigation {
-  visibility: hidden; }
-
-.thumbs__categories .navigation {
-  visibility: hidden; }
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   .main__wrapper {
     padding: 0px 12px; }
   .main__menu__menu-btn {
@@ -572,17 +557,31 @@ body {
       .articles__article_medium .articles__article__wrapper__description {
         visibility: hidden; }
     .articles__combined > .row > .col {
-      width: 50%; } }
+      width: 50%; }
+  .thumbs {
+    overflow: hidden; }
+    .thumbs__cards {
+      width: max-content;
+      white-space: nowrap; }
+      .thumbs__cards__card__title {
+        white-space: initial; } }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (max-width: 1023px) and (min-width: 768px) {
   .wrapper {
     width: 100%; }
   .sidebar {
     display: none; }
   .caption {
     padding: 0px 15px; }
-  .thumbs__categories {
-    margin-left: 15px; }
+  .thumbs {
+    overflow: hidden; }
+    .thumbs__cards {
+      width: max-content;
+      white-space: nowrap; }
+      .thumbs__cards__card__title {
+        white-space: initial; }
+    .thumbs__categories {
+      margin-left: 15px; }
   .header {
     padding: 16px;
     padding-bottom: 44px; }
@@ -628,6 +627,9 @@ body {
           margin-bottom: 11px; }
         .articles__article_main .articles__article__wrapper .information-block__description {
           visibility: hidden; }
+      .articles__article_main {
+        background: url("../assets/images/article-1-large.png");
+        background-size: 100% 100%; }
       .articles__article_medium {
         margin-top: 15px;
         background: url("../assets/images/article-2-large.png");
