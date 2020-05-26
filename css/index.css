@@ -264,6 +264,8 @@ body {
           margin-left: 56px; }
         .thumbs__categories__content__category_active {
           border-bottom: #f7ab32 solid 2px; }
+        .thumbs__categories__content__category_short {
+          display: none; }
   .thumbs__cards {
     display: flex;
     justify-content: space-between;
@@ -577,14 +579,13 @@ body {
   .caption {
     padding: 0px 15px; }
   .thumbs {
-    overflow: hidden; }
+    overflow: hidden;
+    padding-left: 15px; }
     .thumbs__cards {
       width: max-content;
       white-space: nowrap; }
       .thumbs__cards__card__title {
         white-space: initial; }
-    .thumbs__categories {
-      margin-left: 15px; }
   .header {
     padding: 16px;
     padding-bottom: 44px; }
@@ -656,9 +657,8 @@ body {
     .timeline > div {
       white-space: initial; }
   .timelines {
-    overflow: hidden; }
-    .timelines__series {
-      padding-left: 15px; }
+    overflow: hidden;
+    padding-left: 15px; }
     .timelines__wrapper {
       width: max-content;
       white-space: nowrap; } }
@@ -669,10 +669,103 @@ body {
   .sidebar {
     display: none; }
   .header {
-    height: 48px; }
+    height: 48px;
+    padding: 7px 16px; }
     .header > :not(:last-child) {
       display: none; }
+    .header__wrapper__burger, .header__wrapper__search-icon, .header__wrapper__login {
+      align-self: center;
+      display: flex; }
+    .header__wrapper__logo {
+      margin-left: 19px; }
+    .header__wrapper__login {
+      color: #ffffff;
+      font-family: "ptsans";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 10px;
+      margin-left: 9px; }
     .header__wrapper_mobile {
-      display: flex; } }
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+      .header__wrapper_mobile > div {
+        display: flex;
+        justify-content: space-between; }
+  .main__menu__menu-btn, .main__menu__search-btn {
+    display: none; }
+  .main__menu__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 19px;
+    width: 100%;
+    margin-left: 0px; }
+    .main__menu__items__item {
+      padding: 0px 0px; }
+      .main__menu__items__item:not(:first-child) {
+        margin-left: 0px; }
+      .main__menu__items__item_hidden {
+        display: none; }
+  .main__wrapper {
+    padding: 0px 0px; }
+  .articles {
+    width: 100%; }
+    .articles__combined {
+      margin-top: 0px;
+      flex-direction: column; }
+      .articles__combined .col:first-child {
+        width: 100%; }
+      .articles__combined .col:last-child {
+        width: 100%; }
+    .articles__article {
+      height: 386px; }
+      .articles__article__wrapper__description {
+        display: none; }
+      .articles__article__wrapper__category {
+        padding-top: 114px; }
+      .articles__article_main {
+        background: url("../assets/images/article-1-large.png");
+        background-size: 100% 100%; }
+        .articles__article_main .information-block {
+          flex-direction: column; }
+          .articles__article_main .information-block__author {
+            margin-bottom: 11px; }
+      .articles__article_medium {
+        margin-top: 15px;
+        background: url("../assets/images/article-2-large.png");
+        background-size: 100% 100%; }
+      .articles__article_small {
+        margin-top: 15px;
+        background: url("../assets/images/article-3-large.png");
+        background-size: 100% 100%; }
+  .thumbs {
+    overflow: hidden;
+    padding-left: 15px; }
+    .thumbs__cards {
+      width: max-content;
+      white-space: nowrap; }
+      .thumbs__cards__card__title {
+        white-space: initial; }
+    .thumbs__categories {
+      display: flex;
+      justify-content: space-between; }
+      .thumbs__categories__content {
+        width: 100%; }
+        .thumbs__categories__content__category {
+          display: none; }
+          .thumbs__categories__content__category_short {
+            display: flex; }
+  .timelines {
+    overflow: hidden;
+    padding-left: 15px; }
+    .timelines__wrapper {
+      width: max-content;
+      white-space: nowrap; }
+  .timeline {
+    width: 330px; }
+    .timeline > div {
+      white-space: initial; } }
 
 /*# sourceMappingURL=index.css.map */
