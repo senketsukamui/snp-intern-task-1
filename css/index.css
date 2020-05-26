@@ -78,6 +78,9 @@ body {
     line-height: 10px;
     position: relative;
     top: -31px; }
+  .header__wrapper_mobile {
+    display: none;
+    justify-content: space-between; }
 
 .main__menu {
   font-family: "brutal";
@@ -659,5 +662,17 @@ body {
     .timelines__wrapper {
       width: max-content;
       white-space: nowrap; } }
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .wrapper {
+    width: 100%; }
+  .sidebar {
+    display: none; }
+  .header {
+    height: 48px; }
+    .header > :not(:last-child) {
+      display: none; }
+    .header__wrapper_mobile {
+      display: flex; } }
 
 /*# sourceMappingURL=index.css.map */

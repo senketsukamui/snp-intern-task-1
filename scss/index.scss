@@ -93,6 +93,13 @@ body {
     position: relative;
     top: -31px;
   }
+
+  &__wrapper {
+    &_mobile {
+      display: none;
+      justify-content: space-between;
+    }
+  }
 }
 
 .main {
@@ -929,6 +936,26 @@ body {
     &__wrapper {
       width: max-content;
       white-space: nowrap;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .wrapper {
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .header {
+    height: 48px;
+    > :not(:last-child) {
+      display: none;
+    }
+    &__wrapper {
+      &_mobile {
+        display: flex;
+      }
     }
   }
 }
