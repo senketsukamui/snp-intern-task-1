@@ -102,6 +102,7 @@ body {
     .main__menu__items__item:hover {
       background: #faaf3f;
       border-radius: 2px;
+      color: white;
       transition: background-color 0.3s; }
   .main__menu__menu-btn {
     margin-left: 47px;
@@ -245,11 +246,15 @@ body {
       font-style: normal;
       font-weight: normal;
       font-size: 10px;
-      line-height: 16px; }
+      line-height: 16px;
+      display: flex;
+      align-items: center; }
     .information-block__social > div:not(:last-child) {
       margin-right: 8px; }
     .information-block__social img {
-      margin-right: 7px; }
+      margin-right: 7px;
+      display: flex;
+      align-items: center; }
 
 .caption, .thumbs__categories > div {
   font-family: "ptsans";
@@ -276,7 +281,7 @@ body {
         padding-bottom: 6px; }
         .thumbs__categories__content__category:not(:first-child) {
           margin-left: 56px; }
-        .thumbs__categories__content__category_active {
+        .thumbs__categories__content__category:first-child {
           border-bottom: #f7ab32 solid 2px; }
         .thumbs__categories__content__category_short {
           display: none; }
@@ -340,7 +345,8 @@ body {
   padding: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 37px; }
   .timeline .categories {
     display: none; }
   .timeline_hidden {
@@ -420,7 +426,8 @@ body {
     .sidebar__series__content .timeline {
       box-shadow: none;
       padding: 0 0;
-      margin-right: 0px; }
+      margin-right: 0px;
+      margin-bottom: 0px; }
       .sidebar__series__content .timeline__button {
         width: 100%;
         margin-top: 19px; }
@@ -517,6 +524,9 @@ body {
       font-size: 15px;
       line-height: 21px;
       padding-top: 6px; }
+      .sidebar__news__description:hover {
+        color: #faaf3f;
+        cursor: pointer; }
 
 .navigation {
   display: flex; }
@@ -670,8 +680,6 @@ body {
   .thumbs {
     overflow: hidden;
     padding-left: 15px; }
-    .thumbs__categories__content__category_active {
-      border: none; }
     .thumbs__cards {
       width: max-content;
       white-space: nowrap; }
@@ -894,8 +902,6 @@ body {
         width: 100%; }
         .thumbs__categories__content__category {
           display: none; }
-          .thumbs__categories__content__category_active {
-            border: none; }
           .thumbs__categories__content__category_short {
             display: flex; }
   .timelines {
