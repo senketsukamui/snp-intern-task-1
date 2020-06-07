@@ -363,9 +363,6 @@ body {
         &:not(:first-child) {
           margin-left: 56px;
         }
-        &:first-child {
-          border-bottom: #f7ab32 solid 2px;
-        }
 
         &_short {
           display: none;
@@ -427,6 +424,9 @@ body {
   }
 }
 
+.active {
+  border-bottom: #f7ab32 solid 2px;
+}
 .timelines {
   margin-top: 40px;
   &__series {
@@ -1136,7 +1136,7 @@ body {
     }
   }
   .timeline {
-    width: 330px;
+    width: 288px;
     & > div {
       white-space: initial;
     }
@@ -1304,8 +1304,10 @@ body {
 
       &__content {
         width: 100%;
+
         &__category {
           display: none;
+
           &_short {
             display: flex;
           }

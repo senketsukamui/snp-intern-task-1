@@ -281,8 +281,6 @@ body {
         padding-bottom: 6px; }
         .thumbs__categories__content__category:not(:first-child) {
           margin-left: 56px; }
-        .thumbs__categories__content__category:first-child {
-          border-bottom: #f7ab32 solid 2px; }
         .thumbs__categories__content__category_short {
           display: none; }
   .thumbs__cards {
@@ -323,6 +321,9 @@ body {
         line-height: 24px;
         letter-spacing: -0.02em;
         color: #ffffff; }
+
+.active {
+  border-bottom: #f7ab32 solid 2px; }
 
 .timelines {
   margin-top: 40px; }
@@ -801,7 +802,7 @@ body {
         display: flex;
         justify-content: space-between; }
   .timeline {
-    width: 330px; }
+    width: 288px; }
     .timeline > div {
       white-space: initial; }
     .timeline .categories {
