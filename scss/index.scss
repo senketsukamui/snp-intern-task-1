@@ -6,6 +6,8 @@ div {
   word-wrap: break-word;
 }
 
+@import "/scss/colors.scss";
+
 @font-face {
   font-family: brutal;
   src: url(".././assets/fonts/BrutalRegular.woff");
@@ -49,14 +51,14 @@ div {
 }
 
 body {
-  background: #f2f2f2;
+  background: $page-color;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   height: 173px;
-  background: linear-gradient(360deg, #223036 0%, #223036 100%);
+  background: $header-color;
   position: relative;
   padding: 47px;
   padding-right: 19px;
@@ -124,7 +126,7 @@ body {
         margin-left: 24px;
       }
       &__item:hover {
-        background: #faaf3f;
+        background: $yellow-label;
         border-radius: 2px;
         color: white;
         transition: background-color 0.3s;
@@ -256,7 +258,7 @@ body {
         width: 118px;
 
         &_text-highlight {
-          background: #faaf3f;
+          background: $yellow-label
           text-align: center;
           border-radius: 2px;
           padding: 3px 0px;
@@ -425,7 +427,7 @@ body {
 }
 
 .active {
-  border-bottom: #f7ab32 solid 2px;
+  border-bottom: $thumbs-underline solid 2px;
 }
 .timelines {
   margin-top: 40px;
@@ -528,7 +530,7 @@ body {
     }
 
     &__line:hover {
-      color: #faaf3f;
+      color: $yellow-label;
       transition: 0.2s;
     }
 
@@ -698,7 +700,7 @@ body {
       line-height: 21px;
       padding-top: 6px;
       &:hover {
-        color: #faaf3f;
+        color: $yellow-label;
         cursor: pointer;
       }
     }
@@ -737,7 +739,7 @@ body {
     line-height: 21px;
     display: flex;
     align-items: center;
-    color: #0776d2;
+    color: $link-color;
     cursor: pointer;
     &:hover {
       text-decoration-line: underline;
