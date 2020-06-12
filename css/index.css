@@ -330,6 +330,12 @@ body {
         background: url("../assets/images/article-1.png");
         background-size: cover;
         background-position: center; } }
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .article_main .article__wrapper {
+      padding: 72px 190px 15px 20px; } }
+  @media (max-width: 767px) {
+    .article_main .article__wrapper {
+      padding: 85px 20px 30px 20px; } }
   .article_main .article__wrapper__title {
     height: unset; }
   .article_medium {

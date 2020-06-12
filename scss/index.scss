@@ -390,6 +390,12 @@ body {
   }
   &_main & {
     &__wrapper {
+      @include media-tablet {
+        padding: 72px 190px 15px 20px;
+      }
+      @include media-mobile {
+        padding: 85px 20px 30px 20px;
+      }
       &__title {
         height: unset;
       }
