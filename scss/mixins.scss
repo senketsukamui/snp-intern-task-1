@@ -39,3 +39,15 @@
     @content;
   }
 }
+
+@mixin media-desktop-large {
+  @media (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin media-desktop-medium {
+  @media (max-width: 1439px) and (min-width: 1024px) {
+    @content;
+  }
+}
