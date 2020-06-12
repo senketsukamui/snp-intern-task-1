@@ -40,7 +40,7 @@ div {
   font-weight: 700; }
 
 body {
-  background: #f2f2f2; }
+  background: #e5e5e5; }
 
 .header {
   display: flex;
@@ -82,32 +82,34 @@ body {
     display: none;
     justify-content: space-between; }
 
-.main__menu {
+.menu {
   font-family: "brutal";
   display: flex;
+  flex-direction: row;
   height: 48px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); }
-  .main__menu__items {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  width: 100%; }
+  .menu__items {
     display: flex;
     margin: 12px 0px;
     margin-left: 28px;
     cursor: pointer; }
-    .main__menu__items__item {
+    .menu__items__item {
       padding: 4px 13px 3px 14px;
       font-size: 16px; }
-      .main__menu__items__item_hidden {
+      .menu__items__item_hidden {
         display: none; }
-    .main__menu__items__item:not(:first-child) {
+    .menu__items__item:not(:first-child) {
       margin-left: 24px; }
-    .main__menu__items__item:hover {
+    .menu__items__item:hover {
       background: #faaf3f;
       border-radius: 2px;
       color: white;
       transition: background-color 0.3s; }
-  .main__menu__menu-btn {
+  .menu__menu-btn {
     margin-left: 47px;
     cursor: pointer; }
-  .main__menu__search-btn {
+  .menu__search-btn {
     margin-right: 14px;
     margin-left: auto;
     cursor: pointer; }
