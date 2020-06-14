@@ -668,15 +668,15 @@ body {
       justify-content: space-between;
       padding: 0px 15px;
     }
-    & > div {
-      @extend %caption-styles;
-      font-weight: bold;
-    }
     &__content {
       display: flex;
       justify-content: space-between;
       @include media-mobile {
         width: 100%;
+      }
+      & > * {
+        @extend %caption-styles;
+        font-weight: bold;
       }
       &__category {
         cursor: pointer;
@@ -888,6 +888,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     padding-bottom: 24px;
+    white-space: initial;
   }
   &__content {
     border-left: 1px solid #828282;
@@ -1118,6 +1119,7 @@ body {
 
 .navigation {
   display: flex;
+  cursor: pointer;
   &__right-arrow {
     margin-left: 23px;
   }
