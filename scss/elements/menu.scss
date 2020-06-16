@@ -34,41 +34,41 @@
       margin-left: 0px;
       align-items: center;
     }
-    &__item {
-      padding: 4px 13px 3px 14px;
-      font-size: 16px;
+  }
+  &__item {
+    padding: 4px 13px 3px 14px;
+    font-size: 16px;
+    @include media-tablet {
+      padding: 0px 0px;
+    }
+    @include media-mobile {
+      padding: 0px 0px;
+      font-size: 14px;
+    }
+    &_hidden {
+      display: none;
       @include media-tablet {
-        padding: 0px 0px;
+        display: flex;
       }
       @include media-mobile {
-        padding: 0px 0px;
-        font-size: 14px;
-      }
-      &_hidden {
         display: none;
-        @include media-tablet {
-          display: flex;
-        }
-        @include media-mobile {
-          display: none;
-        }
       }
     }
-    &__item:not(:first-child) {
-      margin-left: 24px;
-      @include media-tablet {
-        margin-left: 0px;
-      }
-      @include media-mobile {
-        margin-left: 0px;
-      }
+  }
+  &__item:not(:first-child) {
+    margin-left: 24px;
+    @include media-tablet {
+      margin-left: 0px;
     }
-    &__item:hover {
-      background: $yellow-label;
-      border-radius: 2px;
-      color: white;
-      transition: background-color 0.3s;
+    @include media-mobile {
+      margin-left: 0px;
     }
+  }
+  &__item:hover {
+    background: $yellow-label;
+    border-radius: 2px;
+    color: white;
+    transition: background-color 0.3s;
   }
   &__menu-btn {
     margin-left: 47px;

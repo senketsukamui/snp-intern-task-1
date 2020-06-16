@@ -18,121 +18,112 @@
   @include media-mobile {
     display: none;
   }
-  &__series {
-    &__content {
-      margin-top: 17px;
-    }
+  &__series-content {
+    margin-top: 17px;
   }
   &__tests {
     margin-top: 20px;
-    .categories {
-      width: 100%;
-    }
-    .timeline {
-      &__button {
-        width: 100%;
-        margin-top: 20px;
-      }
-    }
-    &__content {
-      padding: 64px 18px 21px 20px;
-      background: url("../assets/images/test.png");
-      background-position: center;
-      width: 100%;
-      height: 238px;
-      margin-top: 17px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background-size: 100% 100%;
-      position: relative;
-      &:hover {
-        .hover-bracket-1,
-        .hover-bracket-2,
-        .hover-bracket-3,
-        .hover-bracket-4 {
-          display: flex;
-          transition: 0.4s;
-        }
-      }
-      &__title {
-        font-family: "brutal";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 25px;
-        color: #ffffff;
-        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.33);
+  }
+  &__tests-content {
+    padding: 64px 18px 21px 20px;
+    background: url("../assets/images/test.png");
+    background-position: center;
+    width: 100%;
+    height: 238px;
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: 100% 100%;
+    position: relative;
+    &:hover {
+      .hover-bracket-1,
+      .hover-bracket-2,
+      .hover-bracket-3,
+      .hover-bracket-4 {
+        display: flex;
+        transition: 0.4s;
       }
     }
   }
+  &__tests-title {
+    font-family: "brutal";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    color: #ffffff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.33);
+  }
+
   &__video {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    &__content {
-      margin-top: 24px;
-      background: url("../assets/images/video.png");
-      background-position: center;
-      width: 100%;
-      height: 146px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      &:hover {
-        .hover-bracket-1,
-        .hover-bracket-2,
-        .hover-bracket-3,
-        .hover-bracket-4 {
-          display: flex;
-          transition: 0.4s;
-        }
+  }
+  &__video-content {
+    margin-top: 24px;
+    background: url("../assets/images/video.png");
+    background-position: center;
+    width: 100%;
+    height: 146px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:hover {
+      .hover-bracket-1,
+      .hover-bracket-2,
+      .hover-bracket-3,
+      .hover-bracket-4 {
+        display: flex;
+        transition: 0.4s;
       }
-      &_play-button {
-        width: 32px;
-        height: 32px;
-      }
-    }
-    &__description {
-      font-family: "ptsans";
-      font-style: normal;
-      font-weight: bold;
-      font-size: 15px;
-      line-height: 21px;
-      margin-top: 23px;
     }
   }
+  &__video-play-button {
+    width: 32px;
+    height: 32px;
+  }
+  &__video-description {
+    font-family: "ptsans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 21px;
+    margin-top: 23px;
+  }
+
   &__news {
     margin-top: 20px;
-    &__date {
-      font-family: "ptsans";
-      font-style: normal;
-      font-weight: bold;
-      font-size: 15px;
-      line-height: 21px;
-      padding-top: 20px;
-    }
-    &__time {
-      font-family: "ptsans";
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 24px;
-      padding-top: 8px;
-    }
-    &__description {
-      font-family: "ptsans";
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 21px;
-      padding-top: 6px;
-      &:hover {
-        color: $yellow-label;
-        cursor: pointer;
-      }
+  }
+  &__news-date {
+    font-family: "ptsans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 21px;
+    padding-top: 20px;
+  }
+  &__news-time {
+    font-family: "ptsans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 8px;
+  }
+  &__news-description {
+    font-family: "ptsans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+    padding-top: 6px;
+    &:hover {
+      color: $yellow-label;
+      cursor: pointer;
     }
   }
 }

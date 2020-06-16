@@ -131,10 +131,10 @@
       @include media-tablet {
         padding: 72px 190px 15px 20px;
       }
-      &__description {
-        @include media-non-desktop {
-          visibility: hidden;
-        }
+    }
+    &__description {
+      @include media-non-desktop {
+        visibility: hidden;
       }
     }
   }
@@ -162,25 +162,23 @@
       @include media-tablet {
         padding: 72px 190px 15px 20px;
       }
-      &__description {
-        height: 92px;
-      }
+    }
+    &__description {
+      height: 92px;
     }
   }
   &_main &,
   &_medium &,
   &_small & {
-    &__wrapper {
-      &__title {
-        @include media-mobile {
-          font-family: "brutal";
-          font-size: 20px;
-          line-height: 28px;
-          letter-spacing: -0.02em;
-          text-transform: uppercase;
-          text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
-          margin: 0px;
-        }
+    &__title {
+      @include media-mobile {
+        font-family: "brutal";
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+        margin: 0px;
       }
     }
   }
@@ -196,56 +194,56 @@
     @include media-mobile {
       padding: 114px 20px 26px 15px;
     }
-    &__category {
-      font-family: "brutal";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      font-feature-settings: "tnum" on, "lnum" on;
-      color: #ffffff;
-      width: 118px;
+  }
+  &__category {
+    font-family: "brutal";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-feature-settings: "tnum" on, "lnum" on;
+    color: #ffffff;
+    width: 118px;
 
-      &_text-highlight {
-        background: $yellow-label;
-        text-align: center;
-        border-radius: 2px;
-        padding: 3px 0px;
-      }
+    &_text-highlight {
+      background: $yellow-label;
+      text-align: center;
+      border-radius: 2px;
+      padding: 3px 0px;
     }
-    &__title {
-      font-family: "brutal";
-      font-style: normal;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 30px;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
-      font-feature-settings: "tnum" on, "lnum" on;
-      color: #ffffff;
-      height: 83px;
-      text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
-      @include media-mobile {
-        padding: 0px 0px;
-        font-size: 20px;
-      }
+  }
+  &__title {
+    font-family: "brutal";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    font-feature-settings: "tnum" on, "lnum" on;
+    color: #ffffff;
+    height: 83px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+    @include media-mobile {
+      padding: 0px 0px;
+      font-size: 20px;
     }
-    &__description {
-      font-family: "ptsans";
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 24px;
-      font-feature-settings: "tnum" on, "lnum" on;
-      color: #ffffff;
-      @include media-tablet {
-        visibility: hidden;
-      }
-      @include media-mobile {
-        display: none;
-      }
+  }
+  &__description {
+    font-family: "ptsans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    font-feature-settings: "tnum" on, "lnum" on;
+    color: #ffffff;
+    @include media-tablet {
+      visibility: hidden;
+    }
+    @include media-mobile {
+      display: none;
     }
   }
 }
