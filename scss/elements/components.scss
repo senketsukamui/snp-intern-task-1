@@ -1,0 +1,155 @@
+@import "../colors.scss";
+@import "../mixins.scss";
+
+.information-block {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  font-family: "ptsans";
+  $parent: &;
+
+  &_article-medium,
+  &_article-small {
+    flex-direction: column;
+    #{$parent}__author {
+      margin-bottom: 11px;
+    }
+  }
+
+  &_article-main {
+    flex-direction: flex-start;
+    @include media-mobile {
+      flex-direction: column;
+    }
+    @include media-tablet {
+      flex-direction: column;
+    }
+    #{$parent}__author {
+      margin-bottom: 11px;
+    }
+    &__social {
+      align-self: flex-start;
+    }
+  }
+  &_thumb {
+    margin-bottom: 0px;
+  }
+
+  &_tests {
+    margin-bottom: 0px;
+  }
+  &__author {
+    width: 294px;
+    height: 23px;
+    &__name {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 24px;
+    }
+    &__date {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+
+    & > div {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    > div:not(:last-child) {
+      margin-right: 8px;
+    }
+    img {
+      margin-right: 7px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.active {
+  border-bottom: $thumbs-underline solid 2px;
+}
+.orange-button {
+  font-family: "brutal";
+  font-size: 14px;
+  align-self: center;
+  text-align: center;
+  padding: 9px;
+  letter-spacing: 0.02em;
+  background: $yellow-label;
+  color: #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 197px;
+  &:hover {
+    background-color: $yellow-button-hover;
+  }
+
+  &_tests {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  &_series {
+    width: 100%;
+  }
+}
+
+.navigation {
+  display: flex;
+  cursor: pointer;
+  &__right-arrow {
+    margin-left: 23px;
+  }
+  @include media-desktop-large {
+    visibility: hidden;
+  }
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  &__title {
+    font-family: "brutal";
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    background: #333333;
+    color: #ffffff;
+    border-radius: 2px;
+    width: 92px;
+    padding: 5px;
+  }
+
+  &__link {
+    font-family: "ptsans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: $link-color;
+    cursor: pointer;
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+}
