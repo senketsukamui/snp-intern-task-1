@@ -51,6 +51,8 @@
 
     &_short {
       display: none;
+      @extend %caption-styles;
+      font-weight: bold;
       @include media-mobile {
         display: flex;
       }

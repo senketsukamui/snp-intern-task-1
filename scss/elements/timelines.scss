@@ -168,15 +168,5 @@
     &:first-child {
       margin-right: 0;
     }
-
-    &__button {
-      width: 100%;
-      margin-top: 19px;
-    }
-    &__content {
-      &__line:last-child {
-        padding-bottom: 0px;
-      }
-    }
   }
 }
