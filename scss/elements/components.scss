@@ -160,4 +160,14 @@
       text-decoration-line: underline;
     }
   }
+
+  &_timeline {
+    display: none;
+    @include media-mobile {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 17px;
+    }
+  }
 }
