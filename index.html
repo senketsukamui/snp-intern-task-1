@@ -6,449 +6,473 @@
     <title>Hardware</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="css/mixins.css" />
     <link rel="icon" href="./assets/images/favicon.png" />
   </head>
 
   <body>
     <div class="wrapper">
-      <div class="header">
-        <img class="header__burger-icon" src="assets/images/menu-white.svg" />
+      <header class="header">
+        <img
+          class="burger-icon_desktop"
+          src="assets/images/menu-white.svg"
+          alt="Menu logo"
+        />
         <div class="header__logo"><img src="assets/images/logo.svg" /></div>
-        <div class="header__description">
-          Здесь думающие ​люди ​делятся ​уникальным ​​опытом. ​​Здесь будет ​​одинаково ​интересно ​программистам ​и журналистам, ​​админам ​и рекламщикам, ​аналитикам ​и дизайнерам, ​менеджерам ​высшего ​и среднего ​звена, ​владельцам ​крупных ​компаний ​и небольших ​фирм, ​а также ​всем ​тем, ​для кого ​IT — ​это не просто ​две буквы ​алфавита
-        </div>
+        <p class="header__description">
+          Здесь думающие ​люди ​делятся ​уникальным ​​опытом. ​​Здесь будет ​​
+          одинаково ​интересно ​программистам ​и журналистам, ​​админам ​и
+          рекламщикам, ​аналитикам ​и дизайнерам, ​менеджерам ​высшего ​и
+          среднего ​звена, ​владельцам ​крупных ​компаний ​и небольших ​фирм, ​а
+          также ​всем ​тем, ​для кого ​IT — ​это не просто ​две буквы ​алфавита
+        </p>
         <div class="header__login">Вход</div>
-        <div class="header__wrapper_mobile">
-          <div>
-            <div class="header__wrapper__burger">
-              <img src="assets/images/menu-white.svg" />
+        <div class="header_mobile">
+          <div class="header__flex-item">
+            <div class="burger-icon_mobile">
+              <img src="assets/images/menu-white.svg" alt="Menu button" />
             </div>
-            <div class="header__wrapper__logo">
-              <img src="assets/images/logo-mini.png" />
+            <div class="header__logo_mobile">
+              <img src="assets/images/logo-mini.png" alt="Mini logo" />
             </div>
           </div>
-          <div>
-            <div class="header__wrapper__search-icon">
-              <img src="assets/images/search-white.svg" />
+          <div class="header__flex-item">
+            <div class="header__search-icon_mobile">
+              <img src="assets/images/search-white.svg" alt="Search button" />
             </div>
-            <div class="header__wrapper__login">Вход</div>
+            <div class="header__login_mobile">Вход</div>
           </div>
         </div>
-      </div>
-
-      <div class="main">
-        <div class="main__menu">
-          <img class="main__menu__menu-btn" src="assets/images/menu.svg" />
-          <div class="main__menu__items">
-            <div class="main__menu__items__item hover-control">Новости</div>
-            <div class="main__menu__items__item hover-control">Видео</div>
-            <div class="main__menu__items__item hover-control">Тесты</div>
-            <div class="main__menu__items__item hover-control">Серии</div>
-            <div class="main__menu__items__item hover-control">Рубрики</div>
-            <div class="main__menu__items__item_hidden main__menu__items__item">
-              Поиск
-            </div>
-          </div>
-          <img src="assets/images/search.svg" class="main__menu__search-btn" />
+      </header>
+      <nav class="menu">
+        <img
+          class="menu__menu-btn"
+          src="assets/images/menu.svg"
+          alt="Menu button"
+        />
+        <div class="menu__items">
+          <a class="menu__item hover-control">Новости</a>
+          <a class="menu__item hover-control">Видео</a>
+          <a class="menu__item hover-control">Тесты</a>
+          <a class="menu__item hover-control">Серии</a>
+          <a class="menu__item hover-control">Рубрики</a>
+          <a class="menu__item menu__item_hidden">
+            Поиск
+          </a>
         </div>
+        <img
+          src="assets/images/search.svg"
+          class="menu__search-btn"
+          alt="Search button"
+        />
+      </nav>
+      <main class="main">
         <div class="main__wrapper">
-          <div class="main__wrapper__today-title">
+          <h1 class="main__title">
             Сегодня в выпуске
-          </div>
-          <div class="main__wrapper__content">
+          </h1>
+          <article class="main__content">
             <div class="articles">
-              <div
-                class="articles__article articles__article_main hover-control"
-              >
-                <div class="articles__article__wrapper">
+              <section class="article article_main hover-control">
+                <div class="article__wrapper">
                   <img
                     src="assets/images/bracket-1.png"
                     class="hover-bracket-1"
+                    alt="Hover bracket"
                   />
                   <img
                     src="assets/images/bracket-2.png"
                     class="hover-bracket-2"
+                    alt="Hover bracket"
                   />
                   <img
                     src="assets/images/bracket-3.png"
                     class="hover-bracket-3"
+                    alt="Hover bracket"
                   />
                   <img
                     src="assets/images/bracket-4.png"
                     class="hover-bracket-4"
+                    alt="Hover bracket"
                   />
-                  <div class="articles__article__wrapper__category">
-                    <div
-                      class="articles__article__wrapper__category_text-highlight"
-                    >
+                  <div class="article__category">
+                    <div class="article__category_text-highlight">
                       сделай сам
                     </div>
                   </div>
-                  <div class="articles__article__wrapper__title">
-                    Блокнот с осциллографом и генератором <br />
-                    частот (звуковой картой)
-                  </div>
-                  <div class="articles__article__wrapper__description">
+                  <h2 class="article__title">
+                    Блокнот с осциллографом и генератором частот (звуковой
+                    картой)
+                  </h2>
+                  <p class="article__description">
                     Решил немного написать про свою поделку. Несколько раз
                     попадались разнообразные diy линейки. Захотелось сделать
                     себе что-то подобное, многофункциональное. Форм-фактор
                     линейки мне не очень подходил, решил сделать в виде
                     блокнота.
-                  </div>
-                  <div class="information-block">
+                  </p>
+                  <footer
+                    class="information-block information-block_article-main"
+                  >
                     <div class="information-block__author">
-                      <span class="information-block__author__name">
+                      <span class="information-block__name">
                         GMaksim2008 /
                       </span>
-                      <span class="information-block__author__date">
+                      <span class="information-block__date">
                         22 марта, 12:15
                       </span>
                     </div>
                     <div class="information-block__social">
-                      <div class="information-block__social__views">
+                      <div class="information-block__views">
                         <img
                           src="./assets/images/views-icon.svg"
-                          class="information-block__social__views_icon"
+                          class="information-block__views-icon"
+                          alt="Views icon"
                         />
-                        <span class="information-block__social__views_count">
+                        <span class="information-block__views-count">
                           4567
                         </span>
                       </div>
-                      <div class="information-block__social__dogs">
+                      <div class="information-block__dogs">
                         <img
                           src="./assets/images/dog-icon.svg"
-                          class="information-block__social__dogs_icon"
+                          class="information-block__dogs-icon"
+                          alt="Dogs icon"
                         />
-                        <span class="information-block__social__dogs_count">
+                        <span class="information-block__dogs-count">
                           12
                         </span>
                       </div>
-                      <div class="information-block__social__comments">
+                      <div class="information-block__comments">
                         <img
                           src="./assets/images/comments-icon.svg"
-                          class="information-block__social__comments_icon"
+                          class="information-block__comments-icon"
+                          alt="Dogs icon"
                         />
-                        <span class="information-block__social__comments_count">
+                        <span class="information-block__comments-count">
                           45
                         </span>
                       </div>
-                      <div class="information-block__social__reposts">
+                      <div class="information-block__reposts">
                         <img
                           src="./assets/images/reposts-icon.svg"
-                          class="information-block__social__reposts_icon"
+                          class="information-block__reposts-icon"
+                          alt="Reposts icon"
                         />
-                        <span class="information-block__social__reposts_count">
+                        <span class="information-block__reposts-count">
                           678
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </footer>
                 </div>
-              </div>
-              <div class="articles__combined">
+              </section>
+              <section class="articles__combined">
                 <div class="row row-2">
                   <div class="col">
-                    <div
-                      class="articles__article articles__article_medium hover-control"
-                    >
-                      <div class="articles__article__wrapper">
+                    <section class="article article_medium hover-control">
+                      <div class="article__wrapper">
                         <img
                           src="assets/images/bracket-1.png"
                           class="hover-bracket-1"
+                          alt="Hover bracket"
                         />
                         <img
                           src="assets/images/bracket-2.png"
                           class="hover-bracket-2"
+                          alt="Hover bracket"
                         />
                         <img
                           src="assets/images/bracket-3.png"
                           class="hover-bracket-3"
+                          alt="Hover bracket"
                         />
                         <img
                           src="assets/images/bracket-4.png"
                           class="hover-bracket-4"
+                          alt="Hover bracket"
                         />
-                        <div class="articles__article__wrapper__category">
-                          <div
-                            class="articles__article__wrapper__category_text-highlight"
-                          >
+                        <div class="article__category">
+                          <div class="article__category_text-highlight">
                             железо
                           </div>
                         </div>
-                        <div class="articles__article__wrapper__title">
+                        <h2 class="article__title">
                           Древности: удаленная работа на устройствах 1998 года
-                        </div>
-                        <div class="articles__article__wrapper__description">
+                        </h2>
+                        <p class="article__description">
                           Поговорим о старых железках. В 2020 году у нас есть
                           множество инструментов удаленной работы — от
-                          традиционной электронной почты, до весьма <br />
-                          совершенных мессенджеров, веб-конференций с...
-                        </div>
-                        <div class="information-block">
+                          традиционной электронной почты, до весьма совершенных
+                          мессенджеров, веб-конференций с...
+                        </p>
+                        <footer
+                          class="information-block information-block_article-medium"
+                        >
                           <div class="information-block__author">
-                            <span class="information-block__author__name">
+                            <span class="information-block__name">
                               f15 /
                             </span>
-                            <span class="information-block__author__date">
+                            <span class="information-block__date">
                               22 марта, 12:15
                             </span>
                           </div>
                           <div class="information-block__social">
-                            <div class="information-block__social__views">
+                            <div class="information-block__views">
                               <img
                                 src="./assets/images/views-icon.svg"
-                                class="information-block__social__views_icon"
+                                class="information-block__views-icon"
+                                alt="Views icon"
                               />
-                              <span
-                                class="information-block__social__views_count"
-                              >
+                              <span class="information-block__views-count">
                                 4567
                               </span>
                             </div>
-                            <div class="information-block__social__dogs">
+                            <div class="information-block__dogs">
                               <img
                                 src="./assets/images/dog-icon.svg"
-                                class="information-block__social__dogs_icon"
+                                class="information-block__dogs-icon"
+                                alt="Dogs icon"
                               />
-                              <span
-                                class="information-block__social__dogs_count"
-                              >
+
+                              <span class="information-block__dogs-count">
                                 12
                               </span>
                             </div>
-                            <div class="information-block__social__comments">
+                            <div class="information-block__comments">
                               <img
                                 src="./assets/images/comments-icon.svg"
-                                class="information-block__social__comments_icon"
+                                class="information-block__comments-icon"
+                                alt="Comments icon"
                               />
-                              <span
-                                class="information-block__social__comments_count"
-                              >
+                              <span class="information-block__comments-count">
                                 45
                               </span>
                             </div>
-                            <div class="information-block__social__reposts">
+                            <div class="information-block__reposts">
                               <img
                                 src="./assets/images/reposts-icon.svg"
-                                class="information-block__social__reposts_icon"
+                                class="information-block__reposts-icon"
+                                alt="Reposts icon"
                               />
-                              <span
-                                class="information-block__social__reposts_count"
-                              >
+                              <span class="information-block__reposts-count">
                                 678
                               </span>
                             </div>
                           </div>
-                        </div>
+                        </footer>
                       </div>
-                    </div>
+                    </section>
                   </div>
                   <div class="col">
-                    <div
-                      class="articles__article articles__article_small hover-control"
-                    >
-                      <div class="articles__article__wrapper">
+                    <section class="article article_small hover-control">
+                      <div class="article__wrapper">
                         <img
                           src="assets/images/bracket-1.png"
                           class="hover-bracket-1"
+                          alt="Hover bracket"
                         />
                         <img
                           src="assets/images/bracket-2.png"
                           class="hover-bracket-2"
+                          alt="Hover bracket"
                         />
                         <img
                           src="assets/images/bracket-3.png"
                           class="hover-bracket-3"
+                          alt="Hover bracket"
                         />
                         <img
                           src="assets/images/bracket-4.png"
                           class="hover-bracket-4"
+                          alt="Hover bracket"
                         />
-                        <div class="articles__article__wrapper__category">
-                          <div
-                            class="articles__article__wrapper__category_text-highlight"
-                          >
+                        <div class="article__category">
+                          <div class="article__category_text-highlight">
                             железо
                           </div>
                         </div>
-                        <div class="articles__article__wrapper__title">
+                        <h2 class="article__title">
                           Кластер Elasticsearch на 200 ТБ+
-                        </div>
-                        <div
-                          class="articles__article__wrapper__description"
-                        ></div>
-                        <div class="information-block">
+                        </h2>
+                        <p class="article__description"></p>
+                        <footer
+                          class="information-block information-block_article-small"
+                        >
                           <div class="information-block__author">
-                            <span class="information-block__author__name">
+                            <span class="information-block__name">
                               entropicus /
                             </span>
-                            <span class="information-block__author__date">
+                            <span class="information-block__date">
                               22 марта, 12:15
                             </span>
                           </div>
                           <div class="information-block__social">
-                            <div class="information-block__social__views">
+                            <div class="information-block__views">
                               <img
                                 src="./assets/images/views-icon.svg"
-                                class="information-block__social__views_icon"
+                                class="information-block__views-icon"
+                                alt="Views icon"
                               />
-                              <span
-                                class="information-block__social__views_count"
-                              >
+                              <span class="information-block__views-count">
                                 4567
                               </span>
                             </div>
-                            <div class="information-block__social__dogs">
+                            <div class="information-block__dogs">
                               <img
                                 src="./assets/images/dog-icon.svg"
-                                class="information-block__social__dogs_icon"
+                                class="information-block__dogs-icon"
+                                alt="Dogs icon"
                               />
-                              <span
-                                class="information-block__social__dogs_count"
-                              >
+                              <span class="information-block__dogs-count">
                                 12
                               </span>
                             </div>
-                            <div class="information-block__social__comments">
+                            <div class="information-block__comments">
                               <img
                                 src="./assets/images/comments-icon.svg"
-                                class="information-block__social__comments_icon"
+                                class="information-block__comments-icon"
+                                alt="Comments icon"
                               />
-                              <span
-                                class="information-block__social__comments_count"
-                              >
+                              <span class="information-block__comments-count">
                                 45
                               </span>
                             </div>
-                            <div class="information-block__social__reposts">
+                            <div class="information-block__reposts">
                               <img
                                 src="./assets/images/reposts-icon.svg"
-                                class="information-block__social__reposts_icon"
+                                class="information-block__reposts-icon"
+                                alt="Reposts icon"
                               />
-                              <span
-                                class="information-block__social__reposts_count"
-                              >
+                              <span class="information-block__reposts-count">
                                 678
                               </span>
                             </div>
                           </div>
-                        </div>
+                        </footer>
                       </div>
-                    </div>
+                    </section>
                   </div>
                 </div>
-              </div>
-              <div class="caption">
+              </section>
+              <p class="caption">
                 На сегодня это всё! Приходите завтра почитать
                 <b
                   >об эффективной работе из дома, о том как Crash Bandicoot
                   взламывал Playstation, о том с чего начиналось IT и об
                   анатомии таблиц LuaJIT и особенностях их использования.</b
                 >
-              </div>
-              <div class="thumbs">
+              </p>
+              <section class="thumbs">
                 <div class="thumbs__categories">
-                  <div class="thumbs__categories__content">
-                    <div class="thumbs__categories__content__category active">
+                  <div class="thumbs__content">
+                    <button class="thumbs__category active">
                       Лучшее за месяц
-                    </div>
-                    <div class="thumbs__categories__content__category">
+                    </button>
+                    <button class="thumbs__category">
                       Лучшее за год
-                    </div>
-                    <div class="thumbs__categories__content__category">
+                    </button>
+                    <button class="thumbs__category">
                       Лучшее за всё время
-                    </div>
-                    <div class="thumbs__categories__content__category_short active">
+                    </button>
+                    <button class="thumbs__category_short active">
                       Лучшее за месяц
-                    </div>
-                    <div class="thumbs__categories__content__category_short">
+                    </button>
+                    <button class="thumbs__category_short">
                       Год
-                    </div>
-                    <div class="thumbs__categories__content__category_short">
+                    </button>
+                    <button class="thumbs__category_short">
                       Всё время
-                    </div>
+                    </button>
                   </div>
-                  <div class="navigation">
+                  <button class="navigation">
                     <img
                       class="navigation__left-arrow"
                       src="./assets/images/left-arrow.svg"
+                      alt="Left arrow"
                     />
                     <img
                       class="navigation__right-arrow"
                       src="./assets/images/right-arrow.svg"
+                      alt="Right arrow"
                     />
-                  </div>
+                  </button>
                 </div>
                 <div class="thumbs__cards">
-                  <div
-                    class="thumbs__cards__card thumbs__cards__card_first hover-control"
+                  <section
+                    class="thumbs__card thumbs__card_first hover-control"
                   >
                     <img
                       src="assets/images/bracket-1.png"
                       class="hover-bracket-1"
+                      alt="Hover bracket"
                     />
                     <img
                       src="assets/images/bracket-2.png"
                       class="hover-bracket-2"
+                      alt="Hover bracket"
                     />
                     <img
                       src="assets/images/bracket-3.png"
                       class="hover-bracket-3"
+                      alt="Hover bracket"
                     />
                     <img
                       src="assets/images/bracket-4.png"
                       class="hover-bracket-4"
+                      alt="Hover bracket"
                     />
-                    <div class="thumbs__cards__card__title">
+                    <h4 class="thumbs__card-title">
                       AI против COVID-19: опыт Хубэя и Флориды
-                    </div>
-                    <div class="information-block">
+                    </h4>
+                    <footer class="information-block information-block_thumb">
                       <div class="information-block__social">
-                        <div class="information-block__social__views">
+                        <div class="information-block__views">
                           <img
                             src="./assets/images/views-icon.svg"
-                            class="information-block__social__views_icon"
+                            class="information-block__views-icon"
+                            alt="Views icon"
                           />
-                          <span class="information-block__social__views_count">
+                          <span class="information-block__views-count">
                             4567
                           </span>
                         </div>
-                        <div class="information-block__social__dogs">
+                        <div class="information-block__dogs">
                           <img
                             src="./assets/images/dog-icon.svg"
-                            class="information-block__social__dogs_icon"
+                            class="information-block__dogs-icon"
+                            alt="Dogs icon"
                           />
-                          <span class="information-block__social__dogs_count">
+                          <span class="information-block__dogs-count">
                             12
                           </span>
                         </div>
-                        <div class="information-block__social__comments">
+                        <div class="information-block__comments">
                           <img
                             src="./assets/images/comments-icon.svg"
-                            class="information-block__social__comments_icon"
+                            class="information-block__comments-icon"
+                            alt="Comments icon"
                           />
-                          <span
-                            class="information-block__social__comments_count"
-                          >
+                          <span class="information-block__comments-count">
                             45
                           </span>
                         </div>
-                        <div class="information-block__social__reposts">
+                        <div class="information-block__reposts">
                           <img
                             src="./assets/images/reposts-icon.svg"
-                            class="information-block__social__reposts_icon"
+                            class="information-block__reposts-icon"
+                            alt="Reposts icon"
                           />
-                          <span
-                            class="information-block__social__reposts_count"
-                          >
+                          <span class="information-block__reposts-count">
                             678
                           </span>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    class="thumbs__cards__card thumbs__cards__card_second hover-control"
+                    </footer>
+                  </section>
+                  <section
+                    class="thumbs__card thumbs__card_second hover-control"
                   >
                     <img
                       src="assets/images/bracket-1.png"
@@ -466,389 +490,401 @@
                       src="assets/images/bracket-4.png"
                       class="hover-bracket-4"
                     />
-                    <div class="thumbs__cards__card__title">
+                    <h4 class="thumbs__card-title">
                       Биологические проблемы багфикса
-                    </div>
-                    <div class="information-block">
+                    </h4>
+                    <footer class="information-block information-block_thumb">
                       <div class="information-block__social">
-                        <div class="information-block__social__views">
+                        <div class="information-block__views">
                           <img
                             src="./assets/images/views-icon.svg"
-                            class="information-block__social__views_icon"
+                            class="information-block__views-icon"
                           />
-                          <span class="information-block__social__views_count">
+                          <span class="information-block__views-count">
                             4567
                           </span>
                         </div>
-                        <div class="information-block__social__dogs">
+                        <div class="information-block__dogs">
                           <img
                             src="./assets/images/dog-icon.svg"
-                            class="information-block__social__dogs_icon"
+                            class="information-block__dogs-icon"
                           />
-                          <span class="information-block__social__dogs_count">
+                          <span class="information-block__dogs-count">
                             12
                           </span>
                         </div>
-                        <div class="information-block__social__comments">
+                        <div class="information-block__comments">
                           <img
                             src="./assets/images/comments-icon.svg"
-                            class="information-block__social__comments_icon"
+                            class="information-block__comments-icon"
                           />
-                          <span
-                            class="information-block__social__comments_count"
-                          >
+                          <span class="information-block__comments-count">
                             45
                           </span>
                         </div>
-                        <div class="information-block__social__reposts">
+                        <div class="information-block__reposts">
                           <img
                             src="./assets/images/reposts-icon.svg"
-                            class="information-block__social__reposts_icon"
+                            class="information-block__reposts-icon"
                           />
-                          <span
-                            class="information-block__social__reposts_count"
-                          >
+                          <span class="information-block__reposts-count">
                             678
                           </span>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    class="thumbs__cards__card thumbs__cards__card_third hover-control"
+                    </footer>
+                  </section>
+                  <section
+                    class="thumbs__card thumbs__card_third hover-control"
                   >
                     <img
                       src="assets/images/bracket-1.png"
                       class="hover-bracket-1"
+                      alt="Hover bracket"
                     />
                     <img
                       src="assets/images/bracket-2.png"
                       class="hover-bracket-2"
+                      alt="Hover bracket"
                     />
                     <img
                       src="assets/images/bracket-3.png"
                       class="hover-bracket-3"
+                      alt="Hover bracket"
                     />
                     <img
                       src="assets/images/bracket-4.png"
                       class="hover-bracket-4"
+                      alt="Hover bracket"
                     />
-                    <div class="thumbs__cards__card__title">
+                    <h4 class="thumbs__card-title">
                       Цели дня как инструмент управления командой
-                    </div>
-                    <div class="information-block">
+                    </h4>
+                    <footer class="information-block information-block_thumb">
                       <div class="information-block__social">
-                        <div class="information-block__social__views">
+                        <div class="information-block__views">
                           <img
                             src="./assets/images/views-icon.svg"
-                            class="information-block__social__views_icon"
+                            class="information-block__views-icon"
+                            alt="Views icon"
                           />
-                          <span class="information-block__social__views_count">
+                          <span class="information-block__views-count">
                             4567
                           </span>
                         </div>
-                        <div class="information-block__social__dogs">
+                        <div class="information-block__dogs">
                           <img
                             src="./assets/images/dog-icon.svg"
-                            class="information-block__social__dogs_icon"
+                            class="information-block__dogs-icon"
+                            alt="Dogs icon"
                           />
-                          <span class="information-block__social__dogs_count">
+                          <span class="information-block__dogs-count">
                             12
                           </span>
                         </div>
-                        <div class="information-block__social__comments">
+                        <div class="information-block__comments">
                           <img
                             src="./assets/images/comments-icon.svg"
-                            class="information-block__social__comments_icon"
+                            class="information-block__comments-icon"
+                            alt="Comments icon"
                           />
-                          <span
-                            class="information-block__social__comments_count"
-                          >
+                          <span class="information-block__comments-count">
                             45
                           </span>
                         </div>
-                        <div class="information-block__social__reposts">
+                        <div class="information-block__reposts">
                           <img
                             src="./assets/images/reposts-icon.svg"
-                            class="information-block__social__reposts_icon"
+                            class="information-block__reposts-icon"
+                            alt="Reposts icon"
                           />
-                          <span
-                            class="information-block__social__reposts_count"
-                          >
+                          <span class="information-block__reposts-count">
                             678
                           </span>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    </footer>
+                  </section>
                 </div>
-              </div>
-              <div class="timelines">
+              </section>
+              <section class="timelines">
                 <div class="timelines__series">
-                  <div class="timelines__series__title">Серии</div>
-                  <div class="navigation">
+                  <h1 class="timelines__series-title">Серии</h1>
+                  <button class="navigation">
                     <img
                       class="navigation__left-arrow"
                       src="./assets/images/left-arrow.svg"
+                      alt="Left arrow"
                     />
                     <img
                       class="navigation__right-arrow"
                       src="./assets/images/right-arrow.svg"
+                      alt="Right arrow"
                     />
-                  </div>
+                  </button>
                 </div>
                 <div class="timelines__wrapper">
-                  <div class="timeline">
-                    <div class="categories">
+                  <div class="timeline timeline_mobile">
+                    <div class="categories categories_timeline">
                       <div class="categories__title">Серии</div>
                       <div class="categories__link hover-control">
                         Все серии
                       </div>
                     </div>
-                    <div class="timeline__title">
-                      HEADWAR против <br />
-                      заблуждений
-                    </div>
+                    <h3 class="timeline__title">
+                      HEADWAR против заблуждений
+                    </h3>
                     <div class="timeline__content">
-                      <div class="timeline__content__line hover-control">
+                      <p class="timeline__item hover-control">
                         Мифы в IT-образовании
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                      </p>
+                      <p class="timeline__item hover-control">
                         25 самых популярных мифов о программировании и
                         программистах
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                      </p>
+                      <p class="timeline__item hover-control">
                         У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых
                         вопиющих IT-заблуждений в истории
-                      </div>
-                      <div
-                        class="timeline__content__line timeline__content__line_mobile-hidden hover-control"
+                      </p>
+                      <p
+                        class="timeline__item timeline__item_mobile-hidden hover-control"
                       >
                         У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых
                         вопиющих IT-заблуждений в истории
-                      </div>
-                      <div
-                        class="timeline__content__line timeline__content__line_mobile-hidden hover-control"
+                      </p>
+                      <p
+                        class="timeline__item timeline__item_mobile-hidden hover-control"
                       >
                         У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых
                         вопиющих IT-заблуждений в истории
-                      </div>
+                      </p>
                     </div>
-                    <div class="timeline__button">
+                    <button class="orange-button">
                       Читать 27 статей
-                    </div>
+                    </button>
                   </div>
 
                   <div class="timeline">
-                    <div class="timeline__title">
-                      HEADWAR против <br />
-                      заблуждений
-                    </div>
+                    <h3 class="timeline__title">
+                      HEADWAR против заблуждений
+                    </h3>
                     <div class="timeline__content">
-                      <div class="timeline__content__line hover-control">
+                      <p class="timeline__item hover-control">
                         Мифы в IT-образовании
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                      </p>
+                      <p class="timeline__item hover-control">
                         25 самых популярных мифов о программировании и
                         программистах
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                      </p>
+                      <p class="timeline__item hover-control">
                         У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых
                         вопиющих IT-заблуждений в истории
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                      </p>
+                      <p class="timeline__item hover-control">
                         У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых
                         вопиющих IT-заблуждений в истории
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                      </p>
+                      <p class="timeline__item hover-control">
                         У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых
                         вопиющих IT-заблуждений в истории
-                      </div>
+                      </p>
                     </div>
-                    <div class="timeline__button">
+                    <button class="orange-button">
                       Читать 27 статей
-                    </div>
+                    </button>
                   </div>
                   <div class="timeline timeline_hidden">
-                    <div class="timeline__title">
-                      HEADWAR против <br />
-                      заблуждений
-                    </div>
+                    <h3 class="timeline__title">
+                      HEADWAR против заблуждений
+                    </h3>
                     <div class="timeline__content">
-                      <div class="timeline__content__line hover-control">
+                      <p class="timeline__item hover-control">
                         Мифы в IT-образовании
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                      </p>
+                      <p class="timeline__item hover-control">
                         25 самых популярных мифов о программировании и
                         программистах
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                      </p>
+                      <p class="timeline__item hover-control">
                         У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых
                         вопиющих IT-заблуждений в истории
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                      </p>
+                      <p class="timeline__item hover-control">
                         У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых
                         вопиющих IT-заблуждений в истории
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                      </p>
+                      <p class="timeline__item hover-control">
                         У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых
                         вопиющих IT-заблуждений в истории
-                      </div>
+                      </p>
                     </div>
-                    <div class="timeline__button">
+                    <div class="orange-button">
                       Читать 27 статей
                     </div>
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
-            <div class="sidebar">
-              <div class="sidebar__series">
+            <aside class="sidebar">
+              <div class="sidebar__series sidebar-card">
                 <div class="categories">
                   <div class="categories__title">Серии</div>
-                  <div class="categories__link hover-control">Все серии</div>
+                  <a class="categories__link hover-control">Все серии</a>
                 </div>
-                <div class="sidebar__series__content">
-                  <div class="timeline">
-                    <div class="timeline__title">
+                <div class="sidebar__series-content">
+                  <div class="timeline timeline_sidebar">
+                    <h3 class="timeline__title">
                       HARDWARE против заблуждений
-                    </div>
+                    </h3>
                     <div class="timeline__content">
-                      <div class="timeline__content__line hover-control">
+                      <p class="timeline__item hover-control">
                         Мифы в IT-образовании
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                      </p>
+                      <p class="timeline__item hover-control">
                         У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых
-                        вопиющих <br />IT-заблуждений в истории
-                      </div>
-                      <div class="timeline__content__line hover-control">
+                        вопиющих IT-заблуждений в истории
+                      </p>
+                      <p class="timeline__item hover-control">
                         У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых
-                        вопиющих <br />IT-заблуждений в истории
-                      </div>
+                        вопиющих IT-заблуждений в истории
+                      </p>
                     </div>
-                    <div class="timeline__button">
+                    <button class="orange-button orange-button_series">
                       Читать 27 статей
-                    </div>
+                    </button>
                   </div>
                 </div>
               </div>
-              <div class="sidebar__tests">
+              <div class="sidebar__tests sidebar-card">
                 <div class="categories">
                   <div class="categories__title">Тесты</div>
-                  <div class="categories__link hover-control">Все тесты</div>
+                  <a class="categories__link hover-control">Все тесты</a>
                 </div>
-                <div class="sidebar__tests__content hover-control">
+                <div class="sidebar__tests-content hover-control">
                   <img
                     src="assets/images/bracket-1.png"
                     class="hover-bracket-1"
+                    alt="Hover bracket"
                   />
                   <img
                     src="assets/images/bracket-2.png"
                     class="hover-bracket-2"
+                    alt="Hover bracket"
                   />
                   <img
                     src="assets/images/bracket-3.png"
                     class="hover-bracket-3"
+                    alt="Hover bracket"
                   />
                   <img
                     src="assets/images/bracket-4.png"
                     class="hover-bracket-4"
+                    alt="Hover bracket"
                   />
-                  <div class="sidebar__tests__content__title">
+                  <div class="sidebar__tests-title">
                     Тест: Как хорошо вы знаете HTML и CSS?
                   </div>
-                  <div class="information-block">
+                  <div class="information-block information-block_tests">
                     <div class="information-block__social">
-                      <div class="information-block__social__views">
+                      <div class="information-block__views">
                         <img
                           src="./assets/images/views-icon.svg"
-                          class="information-block__social__views_icon"
+                          class="information-block__views-icon"
+                          alt="Views icon"
                         />
-                        <span class="information-block__social__views_count">
+                        <span class="information-block__views-count">
                           4567
                         </span>
                       </div>
-                      <div class="information-block__social__dogs">
+                      <div class="information-block__dogs">
                         <img
                           src="./assets/images/dog-icon.svg"
-                          class="information-block__social__dogs_icon"
+                          class="information-block__dogs-icon"
+                          alt="Dogs icon"
                         />
-                        <span class="information-block__social__dogs_count">
+                        <span class="information-block__dogs-count">
                           12
                         </span>
                       </div>
-                      <div class="information-block__social__comments">
+                      <div class="information-block__comments">
                         <img
                           src="./assets/images/comments-icon.svg"
-                          class="information-block__social__comments_icon"
+                          class="information-block__comments-icon"
+                          alt="Comments icon"
                         />
-                        <span class="information-block__social__comments_count">
+                        <span class="information-block__comments-count">
                           45
                         </span>
                       </div>
-                      <div class="information-block__social__reposts">
+                      <div class="information-block__reposts">
                         <img
                           src="./assets/images/reposts-icon.svg"
-                          class="information-block__social__reposts_icon"
+                          class="information-block__reposts-icon"
+                          alt="Reposts icon"
                         />
-                        <span class="information-block__social__reposts_count">
+                        <span class="information-block__reposts-count">
                           678
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="sidebar__tests__button timeline__button">
+                <button class="orange-button orange-button_tests">
                   Пройти тест
-                </div>
+                </button>
               </div>
-              <div class="sidebar__video">
+              <div class="sidebar__video sidebar-card">
                 <div class="categories">
                   <div class="categories__title">Видео</div>
-                  <div class="categories__link">Все видео</div>
+                  <a class="categories__link">Все видео</a>
                 </div>
-                <div class="sidebar__video__content hover-control">
+                <div class="sidebar__video-content hover-control">
                   <img
                     src="assets/images/bracket-1.png"
                     class="hover-bracket-1"
+                    alt="Hover bracket"
                   />
                   <img
                     src="assets/images/bracket-2.png"
                     class="hover-bracket-2"
+                    alt="Hover bracket"
                   />
                   <img
                     src="assets/images/bracket-3.png"
                     class="hover-bracket-3"
+                    alt="Hover bracket"
                   />
                   <img
                     src="assets/images/bracket-4.png"
                     class="hover-bracket-4"
+                    alt="Hover bracket"
                   />
                   <img
-                    class="sidebar_video__content_play-button"
+                    class="sidebar__video-play-button"
                     src="./assets/images/video-play.png"
+                    alt="Play button"
                   />
                 </div>
-                <div class="sidebar__video__description">
+                <div class="sidebar__video-description">
                   Учим HTML за 1 Час!
                 </div>
               </div>
-              <div class="sidebar__news">
+              <div class="sidebar__news sidebar-card">
                 <div class="categories">
                   <div class="categories__title">Надысь</div>
-                  <div class="categories__link">Все новости</div>
+                  <a class="categories__link">Все новости</a>
                 </div>
-                <div class="sidebar__news__date">24 апреля</div>
-                <div class="sidebar__news__time">15:00</div>
-                <div class="sidebar__news__description hover-control">
+                <div class="sidebar__news-date">24 апреля</div>
+                <div class="sidebar__news-time">15:00</div>
+                <p class="sidebar__news-description hover-control">
                   NVIDIA расширяет бесплатный 90-дневный доступ к ПО для
                   поддержки удаленных работников
-                </div>
+                </p>
               </div>
-            </div>
-          </div>
+            </aside>
+          </article>
         </div>
-      </div>
+      </main>
     </div>
   </body>
 </html>

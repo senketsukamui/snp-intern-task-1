@@ -1,0 +1,293 @@
+@import "../colors.scss";
+@import "../mixins.scss";
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  @include media-desktop-medium {
+    padding-right: 10px;
+    width: 73%;
+  }
+  @include media-tablet {
+    width: 100%;
+  }
+  @include media-mobile {
+    width: 100%;
+  }
+  &__combined {
+    margin-top: 25px;
+    display: flex;
+
+    @include media-tablet {
+      margin-top: 0px;
+      flex-direction: column;
+    }
+
+    @include media-mobile {
+      margin-top: 0px;
+      flex-direction: column;
+    }
+    .col:first-child {
+      width: 66.3%;
+      @include media-desktop-medium {
+        width: 50%;
+      }
+      @include media-tablet {
+        width: 100%;
+      }
+      @include media-mobile {
+        width: 100%;
+      }
+    }
+
+    .col:last-child {
+      width: 33.7%;
+      @include media-desktop-medium {
+        width: 50%;
+      }
+      @include media-tablet {
+        width: 100%;
+      }
+      @include media-mobile {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.article {
+  height: 492px;
+  background-size: 100% 100%;
+  position: relative;
+  @include media-desktop-medium {
+    width: 100%;
+  }
+  @include media-tablet {
+    height: 386px;
+  }
+  @include media-mobile {
+    height: 386px;
+  }
+  &:hover {
+    .hover-bracket-1,
+    .hover-bracket-2,
+    .hover-bracket-3,
+    .hover-bracket-4 {
+      display: block;
+      transition: 0.4s;
+    }
+  }
+  &_main {
+    background-image: url("../assets/images/article-1.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    @include media-tablet {
+      background: url("../assets/images/article-1-large.png");
+      background-size: 100% 100%;
+    }
+    @include media-mobile {
+      background: url("../assets/images/article-1.png");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  &_main & {
+    &__wrapper {
+      @include media-tablet {
+        padding: 72px 190px 15px 20px;
+      }
+      @include media-mobile {
+        padding: 85px 20px 30px 20px;
+      }
+      &__title {
+        height: unset;
+      }
+    }
+  }
+  &_medium {
+    cursor: pointer;
+    background-image: url("../assets/images/article-2.png");
+    background-repeat: no-repeat;
+    width: 69.7%;
+    margin-right: 25px;
+    @include media-desktop-medium {
+      margin-right: 0;
+    }
+    @include media-tablet {
+      margin-top: 15px;
+      background: url("../assets/images/article-2-large.png");
+      background-size: 100% 100%;
+    }
+    @include media-mobile {
+      background: url("../assets/images/article-2.png");
+      margin-top: 15px;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  &_medium & {
+    &__wrapper {
+      padding: 85px 20px 30px 20px;
+      @include media-tablet {
+        padding: 72px 190px 15px 20px;
+      }
+    }
+    &__description {
+      @include media-non-desktop {
+        visibility: hidden;
+      }
+    }
+  }
+  &_small {
+    cursor: pointer;
+    background-image: url("../assets/images/article-3.png");
+    background-repeat: no-repeat;
+    width: 31.3%;
+    @include media-tablet {
+      margin-top: 15px;
+      background: url("../assets/images/article-3-large.png");
+      background-size: 100% 100%;
+    }
+    @include media-mobile {
+      background: url("../assets/images/article-3.png");
+      margin-top: 15px;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &_small & {
+    &__wrapper {
+      padding: 85px 20px 30px 20px;
+      @include media-tablet {
+        padding: 72px 190px 15px 20px;
+      }
+    }
+    &__description {
+      height: 92px;
+    }
+  }
+  &_main &,
+  &_medium &,
+  &_small & {
+    &__title {
+      @include media-mobile {
+        font-family: "brutal";
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+        margin: 0px;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 150px 20px 30px 20px;
+    @include media-tablet {
+      padding: 72px 190px 15px 20px;
+    }
+    @include media-mobile {
+      padding: 114px 20px 26px 15px;
+    }
+  }
+  &__category {
+    font-family: "brutal";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-feature-settings: "tnum" on, "lnum" on;
+    color: #ffffff;
+    width: 118px;
+
+    &_text-highlight {
+      background: $yellow-label;
+      text-align: center;
+      border-radius: 2px;
+      padding: 3px 0px;
+    }
+  }
+  &__title {
+    font-family: "brutal";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    font-feature-settings: "tnum" on, "lnum" on;
+    color: #ffffff;
+    height: 83px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+    @include media-mobile {
+      padding: 0px 0px;
+      font-size: 20px;
+    }
+  }
+  &__description {
+    font-family: "ptsans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    font-feature-settings: "tnum" on, "lnum" on;
+    color: #ffffff;
+    @include media-tablet {
+      visibility: hidden;
+    }
+    @include media-mobile {
+      display: none;
+    }
+  }
+}
+
+.article_small .article__wrapper__description {
+  @include media-desktop-medium {
+    height: 125px;
+  }
+}
+
+.article {
+  width: 100%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.row-1 {
+    margin-left: -6px;
+    margin-right: -6px;
+
+    > .col {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+
+  &.row-2 {
+    margin-left: -11px;
+    margin-right: -11px;
+
+    > .col {
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+  }
+
+  &.row-3 {
+    margin-left: -18px;
+    margin-right: -18px;
+
+    > .col {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+}
